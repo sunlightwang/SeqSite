@@ -11,17 +11,11 @@ high resolution.
 
   `git clone https://github.com/sunlightwang/SeqSite.git`
 
-2. Untar the source code package, and 'cd' into the dir 
-SeqSite_1.1.2_src.
-  
-  `tar zxvf SeqSite_1.1.2_src.tar.gz`
-  `cd SeqSite_1.1.2_src`
-
-3. Type 'make' to generate the binary file SeqSite.
+2. Type 'make' to generate the binary file SeqSite.
 
   `make`
 
-4. Type 'make install' to copy the executable file SeqSite 
+3. Type 'make install' to copy the executable file SeqSite 
 to your directory for binary files: ~/bin 
 
    The default installing path is ~/bin. 
@@ -30,7 +24,7 @@ to your directory for binary files: ~/bin
 
   `make install`
 
-5. Type 'SeqSite' to get the information how to run it.
+4. Type 'SeqSite' to get the information how to run it.
 
   `SeqSite -h`
 
@@ -52,29 +46,29 @@ to your directory for binary files: ~/bin
 
 2. Usage
 
-    SeqSite [options] <input.bed> <output.bar> <output.bed>
-        input.bed    ChIP-seq data in BED format (4 fields required: chrId, start, end, and strand)
-        output.bar   BAR file containing binding sites identified
-        output.bed   BED file containing binding regions detected
-    Options: (\* advanced)
-        -c <string>  control data in BED format (4 fields required) (default: not use)
-        -g <int>     effective genome size (default: 2.4e+9 for the human genome)
-        -d <int>     \* tag clustering distance (default: 30)
-        -n <int>     \* min tag count in a tag cluster (default: 10)
-        -S           \* filter single-strand tag clusters (default: not filter)
-        -l <double>  \* average DNA fragment length (default: estimate from data)
-        -t <int>     \* top <int>% tag clusters for frag. length estimating (default: 5)
-        -p <double>  p-value cutoff for binding region detection (default: 1e-3)
-        -f <double>  FDR for binding region detection (default: 0.1)
-        -s <int>     \* arm length for smoothing tag signal (default: 20)
-        -k <int>     \* kernel density bandwidth for smoothing tag signal (default: use -s)
-        -w <int>     \* experimental motif width (default: 20)
-        -F           \* filter out the duplicate reads (default: FALSE)
-        -q           quiet: no screen display (default: show progress)
-    Help Options:
-        -h           show this help message
-        -v           show version information
-        -a           about SeqSite
+>    SeqSite [options] <input.bed> <output.bar> <output.bed>
+>        input.bed    ChIP-seq data in BED format (4 fields required: chrId, start, end, and strand)
+>        output.bar   BAR file containing binding sites identified
+>        output.bed   BED file containing binding regions detected
+>    Options: (\* advanced)
+>        -c <string>  control data in BED format (4 fields required) (default: not use)
+>        -g <int>     effective genome size (default: 2.4e+9 for the human genome)
+>        -d <int>     \* tag clustering distance (default: 30)
+>        -n <int>     \* min tag count in a tag cluster (default: 10)
+>        -S           \* filter single-strand tag clusters (default: not filter)
+>        -l <double>  \* average DNA fragment length (default: estimate from data)
+>        -t <int>     \* top <int>% tag clusters for frag. length estimating (default: 5)
+>        -p <double>  p-value cutoff for binding region detection (default: 1e-3)
+>        -f <double>  FDR for binding region detection (default: 0.1)
+>        -s <int>     \* arm length for smoothing tag signal (default: 20)
+>        -k <int>     \* kernel density bandwidth for smoothing tag signal (default: use -s)
+>        -w <int>     \* experimental motif width (default: 20)
+>        -F           \* filter out the duplicate reads (default: FALSE)
+>        -q           quiet: no screen display (default: show progress)
+>    Help Options:
+>        -h           show this help message
+>        -v           show version information
+>        -a           about SeqSite
 
 
 3. Output files of SeqSite
@@ -121,3 +115,4 @@ Xi Wang ( xi dot wang at mdc-berlin dot de)
 ## CITATION 
 
 [1] Xi Wang and Xuegong Zhang. (2011) Pinpointing Transcription Factor Binding Sites from ChIP-seq Data with SeqSite. BMC Systems Biology, 5(Suppl 2):S3. 
+
