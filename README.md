@@ -75,15 +75,15 @@ to your directory for binary files: ~/bin
 
   3.1. BED file for binding regions
 
-    Each column of the BED file represents:
+      Each column of the BED file represents:
 
-    chr#, start, end, read-count|fold-change|p-value|q-value, score, strand(+)
+      chr#, start, end, read-count|fold-change|p-value|q-value, score, strand(+)
 
   3.2. BAR file for binding sites
 
-    Each column of the BAR file represnets:
+      Each column of the BAR file represnets:
 
-    chr#, position, p-value, fold-change, q-value, R-square, slope(normalized)
+      chr#, position, p-value, fold-change, q-value, R-square, slope(normalized)
 
 
 ## EXAMPLES
