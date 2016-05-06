@@ -31,7 +31,7 @@ to your directory for binary files: ~/bin
 
 ## RUN SeqSite NOW!
 
-1. Input files for SeqSite
+* Input files for SeqSite
 
     ChIP-seq tags: a BED file with 4 fields required: chrId, start, end, and strand
     Control tags:  a BED file with 4 fields required: chrId, start, end, and strand
@@ -44,7 +44,7 @@ to your directory for binary files: ~/bin
     to convert other formats to BED. 
 
 
-2. Usage
+* Usage
 ```
     SeqSite [options] <input.bed> <output.bar> <output.bed>
         input.bed    ChIP-seq data in BED format (4 fields required: chrId, start, end, and strand)
@@ -71,15 +71,15 @@ to your directory for binary files: ~/bin
         -a           about SeqSite
 ```
 
-3. Output files of SeqSite
+* Output files of SeqSite
 
-  3.1. BED file for binding regions
+  - BED file for binding regions
 
       Each column of the BED file represents:
 
       chr#, start, end, read-count|fold-change|p-value|q-value, score, strand(+)
 
-  3.2. BAR file for binding sites
+  - BAR file for binding sites
 
       Each column of the BAR file represnets:
 
