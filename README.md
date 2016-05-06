@@ -7,55 +7,56 @@ high resolution.
 
 ##  INSTALLATION
 
-1 download the most updated SeqSite source code package from 
-http://bioinfo.au.tsinghua.edu.cn/seqsite/
+1. Clone the most updated SeqSite source code package
 
-2 Untar the source code package, and 'cd' into the dir 
+  `git clone https://github.com/sunlightwang/SeqSite.git`
+
+2. Untar the source code package, and 'cd' into the dir 
 SeqSite_1.1.2_src.
   
-  tar zxvf SeqSite_1.1.2_src.tar.gz
-  cd SeqSite_1.1.2_src
+  `tar zxvf SeqSite_1.1.2_src.tar.gz`
+  `cd SeqSite_1.1.2_src`
 
-3 Type 'make' to generate the binary file SeqSite.
+3. Type 'make' to generate the binary file SeqSite.
 
-  make
+  `make`
 
-4 Type 'make install' to copy the executable file SeqSite 
+4. Type 'make install' to copy the executable file SeqSite 
 to your directory for binary files: ~/bin 
 
-The default installing path is ~/bin. 
-please specify BIN_DIR in Makefile, if you want to install 
-SeqSite to anywhere else.
+   The default installing path is ~/bin. 
+   Please specify BIN_DIR in Makefile, if you want to install 
+   SeqSite to anywhere else.
 
-  make install
+  `make install`
 
-5 Type 'SeqSite' to get the information how to run it.
+5. Type 'SeqSite' to get the information how to run it.
 
-  SeqSite -h
+  `SeqSite -h`
 
 
 ## RUN SeqSite NOW!
 
-1 Input files for SeqSite
+1. Input files for SeqSite
 
-ChIP-seq tags: a BED file with 4 fields required: chrId, start, end, and strand
-Control tags:  a BED file with 4 fields required: chrId, start, end, and strand
+    ChIP-seq tags: a BED file with 4 fields required: chrId, start, end, and strand
+    Control tags:  a BED file with 4 fields required: chrId, start, end, and strand
 
-It is recommended to run SeqSite with control data, although it is 
-not required.
+    It is recommended to run SeqSite with control data, although it is 
+    not required.
 
-Users can download PERL script provided on our website 
-http://bioinfo.au.tsinghua.edu.cn/seqsite/
-to convert other formats to BED. 
+    Users can download PERL script provided on our website 
+    http://bioinfo.au.tsinghua.edu.cn/seqsite/
+    to convert other formats to BED. 
 
 
-2 Usage
+2. Usage
 
-SeqSite [options] <input.bed> <output.bar> <output.bed>
+    SeqSite [options] <input.bed> <output.bar> <output.bed>
         input.bed    ChIP-seq data in BED format (4 fields required: chrId, start, end, and strand)
         output.bar   BAR file containing binding sites identified
         output.bed   BED file containing binding regions detected
-Options: (\* advanced)
+    Options: (\* advanced)
         -c <string>  control data in BED format (4 fields required) (default: not use)
         -g <int>     effective genome size (default: 2.4e+9 for the human genome)
         -d <int>     \* tag clustering distance (default: 30)
@@ -70,44 +71,46 @@ Options: (\* advanced)
         -w <int>     \* experimental motif width (default: 20)
         -F           \* filter out the duplicate reads (default: FALSE)
         -q           quiet: no screen display (default: show progress)
-Help Options:
+    Help Options:
         -h           show this help message
         -v           show version information
         -a           about SeqSite
 
 
-3 Output files of SeqSite
+3. Output files of SeqSite
 
-  3.1 BED file for binding regions
+  3.1. BED file for binding regions
 
-Each column of the BED file represents:
-chr#, start, end, read-count|fold-change|p-value|q-value, score, strand(+)
+    Each column of the BED file represents:
 
-  3.2 BAR file for binding sites
+    chr#, start, end, read-count|fold-change|p-value|q-value, score, strand(+)
 
-Each column of the BAR file represnets:
-chr#, position, p-value, fold-change, q-value, R-square, slope(normalized)
+  3.2. BAR file for binding sites
+
+    Each column of the BAR file represnets:
+
+    chr#, position, p-value, fold-change, q-value, R-square, slope(normalized)
 
 
 ## EXAMPLES
 
 We provide an example for a quick start.
 
-1 Please download the following data files first:
+1. Please download the following data files first:
 
-GABP ChIP-seq data: http://bioinfo.au.tsinghua.edu.cn/seqsite/files/GABP.bed.gz
+    GABP ChIP-seq data: http://bioinfo.au.tsinghua.edu.cn/seqsite/files/GABP.bed.gz
 
-Control data:       http://bioinfo.au.tsinghua.edu.cn/seqsite/files/RX_noIP.bed.gz
+    Control data:       http://bioinfo.au.tsinghua.edu.cn/seqsite/files/RX_noIP.bed.gz
 
-2 Unzip the files
+2. Unzip the files
   
-  gunzip GABP.bed.gz
+    `gunzip GABP.bed.gz`
 
-  gunzip RX_noIP.bed.gz
+    `gunzip RX_noIP.bed.gz`
 
-3 Run SeqSite 
+3. Run SeqSite 
 
-  SeqSite -c ./RX_noIP.bed ./GABP.bed GABP.SeqSite.BS.bar GABP.SeqSite.BR.bed
+    `SeqSite -c ./RX_noIP.bed ./GABP.bed GABP.SeqSite.BS.bar GABP.SeqSite.BR.bed`
 
 
 ## BUGS and QUESTIONS
@@ -115,4 +118,6 @@ Control data:       http://bioinfo.au.tsinghua.edu.cn/seqsite/files/RX_noIP.bed.
 Please return any bug reports and questions to 
 Xi Wang ( xi dot wang at mdc-berlin dot de)
 
+## CITATION 
 
+[1] Xi Wang and Xuegong Zhang. (2011) Pinpointing Transcription Factor Binding Sites from ChIP-seq Data with SeqSite. BMC Systems Biology, 5(Suppl 2):S3. 
