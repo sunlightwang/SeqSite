@@ -1,7 +1,7 @@
 # SeqSite: Seeking for ChIP-Seq Binding Sites
 
-SeqSite is for pinpointing transcription factor binding sites 
-from ChIP-seq data. It can locate closely spaced binding sites
+SeqSite is useful to identify transcription factor binding sites 
+based on ChIP-seq data. It can pinpoint closely spaced binding sites
 and isolated binding sites in detected binding regions at a 
 high resolution. 
 
