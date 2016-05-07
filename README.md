@@ -105,7 +105,7 @@ We provide an example for a quick start.
     `SeqSite -c ./RX_noIP.bed ./GABP.bed GABP.SeqSite.BS.bar GABP.SeqSite.BR.bed`
 
 
-## BUGS and QUESTIONS
+## BUGS and COMMENTS
 
 Please return any bug reports and questions to 
 Xi Wang ( xi dot wang at mdc-berlin dot de)
