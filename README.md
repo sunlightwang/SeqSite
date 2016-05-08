@@ -74,15 +74,12 @@ to your directory for binary files: ~/bin
 * Output files of SeqSite
 
     - BED file for binding regions
-```   
-        Each column of the BED file represents:
-        chr#, start, end, read-count|fold-change|p-value|q-value, score, strand(+)
-```
+            Each column of the BED file represents:
+            chr#, start, end, read-count|fold-change|p-value|q-value, score, strand(+)
+
     - BAR file for binding sites
-```     
-        Each column of the BAR file represnets:
-        chr#, position, p-value, fold-change, q-value, R-square, slope(normalized)
-```
+            Each column of the BAR file represnets:
+            chr#, position, p-value, fold-change, q-value, R-square, slope(normalized)
 
 ## EXAMPLES
 
